@@ -1,0 +1,64 @@
+.page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.formPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+
+.title {
+  color: #2ea350;
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: var(--font-aclonica);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 360px;
+  width: 100%;
+}
+
+.illustrationPanel {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.blob {
+  position: absolute;
+  inset: 0;
+  background-image: url("/shape.svg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+
+.illustration {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .formPanel {
+    width: 100%;
+    padding: 3rem 1.5rem;
+  }
+
+  .illustrationPanel {
+    display: none;
+  }
+}
